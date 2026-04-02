@@ -32,4 +32,7 @@ contract UserRegistration {
         User memory user = users[_userAddress];
         return (user.name, user.email);
     }
+    function isRegistered(address _user) public view returns (bool) {
+    return users[_user].exists;
+    }
 }
